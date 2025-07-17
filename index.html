@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<!-- Chosen Palette: "Forest & Birch" - A clean and professional palette with a lighter forest green, white, and neutral grays, inspired by the corrected Warm Waves Coffee branding. -->
+<!-- Chosen Palette: "Crimson & Birch" - A professional palette with a deep red, white, and neutral grays. -->
 <!-- Application Structure Plan: A single-page application structured as a professional proposal packet. A tab-based navigation at the top allows the user to switch between four distinct sections: Cover, Financial Model, Specifications & UX, and Partnership. This structure provides a clear, organized flow for the client. -->
 <!-- Visualization & Content Choices:
-    - Cover Page: Clean, professional text layout with the new green and white color scheme.
-    - Financial Model: Interactive Chart.js doughnut chart to visualize the profit split. Sliders for price and utilization allow the client to explore revenue scenarios based on the new, flat 90/10 profit share model. Includes a new profit-per-square-foot calculator for direct value comparison.
-    - Specifications & UX: Clear, icon-based list for technical requirements combined with a step-by-step visual timeline of the customer journey.
-    - Partnership: A summary of the key benefits and partnership terms.
+     - Cover Page: Clean, professional text layout with the new red and white color scheme.
+     - Financial Model: Interactive Chart.js doughnut chart to visualize the profit split. Sliders for price and utilization allow the client to explore revenue scenarios based on the new, flat 90/10 profit share model. Includes a new profit-per-square-foot calculator for direct value comparison.
+     - Specifications & UX: Clear, icon-based list for technical requirements combined with a step-by-step visual timeline of the customer journey.
+     - Partnership: A summary of the key benefits and partnership terms.
 -->
 <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
 <html lang="en">
@@ -15,17 +15,20 @@
     <title>Boxed Office Partnership Proposal - Because Coffee</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Inter', sans-serif, system-ui;
-            background-color: #f9fafb; /* gray-50 */
+            background-color: #f9fafb; /* gray-50 / off-white */
         }
         :root {
-            --header-text: #14532d; /* green-900 */
+            --header-text: #7f1d1d; /* red-900 */
             --primary-text: #374151; /* gray-700 */
             --secondary-text: #6b7280; /* gray-500 */
-            --accent-color: #166534; /* green-800 */
-            --accent-hover: #15803d; /* green-700 */
+            --accent-color: #991b1b; /* red-800 */
+            --accent-hover: #b91c1c; /* red-700 */
             --bg-card: #ffffff; /* white */
             --border-color: #e5e7eb; /* gray-200 */
         }
@@ -114,26 +117,26 @@
                 <div class="cover-page flex items-center justify-center p-8 md:p-20 text-center" style="min-height: 70vh;">
                     <div>
                         <h1 class="text-4xl md:text-6xl font-bold mb-2">Boxed Office</h1>
-                        <p class="text-xl md:text-2xl text-secondary mb-8">A Partnership Proposal to Enhance Your Space & Create New Revenue</p>
+                        <p class="text-xl md:text-2xl text-secondary-text mb-8">A Partnership Proposal to Enhance Your Space & Create New Revenue</p>
                         <div class="text-lg text-primary mt-12 border-t border-b border-gray-300 py-4">
                             <p class="font-semibold">Prepared for:</p>
                             <p>Doug Cole, Owner</p>
-                            <p>Because Coffee Coffee</p>
+                            <p>Because Coffee</p>
                         </div>
                         <div class="text-lg text-primary mt-4">
                              <p class="font-semibold">Prepared by:</p>
                              <p>Phillip Thornton & Seth Martin, Co-Founders</p>
                              <p>Boxed Office by Paydax</p>
                         </div>
-                        <p class="mt-8 text-sm text-secondary">Date: July 9, 2025</p>
+                        <p class="mt-8 text-sm text-secondary-text">Date: July 17, 2025</p>
                     </div>
                 </div>
             </section>
 
             <!-- Section 2: Financial Model -->
             <section id="financials" class="content-section p-8 md:p-12">
-                <h2 class="text-3xl font-bold mb-2">Interactive Revenue Model</h2>
-                <p class="text-secondary mb-8 max-w-3xl mx-auto text-center">This model estimates the revenue potential for a single Boxed Office unit at your location. Adjust the sliders to see how different pricing and utilization scenarios affect the monthly profit share between Because Coffee and Boxed Office.</p>
+                <h2 class="text-3xl font-bold mb-2 text-center">Interactive Revenue Model</h2>
+                <p class="text-secondary-text mb-8 max-w-3xl mx-auto text-center">This model estimates the revenue potential for a single Boxed Office unit at your location. Adjust the sliders to see how different pricing and utilization scenarios affect the monthly profit share between Because Coffee and Boxed Office.</p>
                 
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center mb-12">
                     <!-- Interactive Controls -->
@@ -154,10 +157,10 @@
                         </div>
                         <div class="bg-gray-50 p-4 rounded-lg border">
                             <h4 class="font-semibold text-primary">Model Assumptions:</h4>
-                            <ul class="text-sm text-secondary list-disc list-inside mt-2">
+                            <ul class="text-sm text-secondary-text list-disc list-inside mt-2">
                                 <li>Based on 1 Boxed Office unit.</li>
                                 <li>Operating 9 hours/day, 30 days/month.</li>
-                                <li>Profit share is a simple **90/10 split** of all revenue generated.</li>
+                                <li>Profit share is a simple <strong>90/10 split</strong> of all revenue generated.</li>
                             </ul>
                         </div>
                     </div>
@@ -165,17 +168,17 @@
                     <!-- Calculated Outputs -->
                     <div class="grid grid-cols-1 gap-4">
                          <div class="bg-gray-100 p-4 rounded-lg text-center border">
-                             <h4 class="text-md font-semibold text-secondary">Total Monthly Revenue</h4>
+                             <h4 class="text-md font-semibold text-secondary-text">Total Monthly Revenue</h4>
                             <p id="total-monthly" class="text-4xl font-bold text-header-text mt-1">$0</p>
                         </div>
                         <div class="grid grid-cols-2 gap-4">
-                            <div class="bg-gray-50 p-4 rounded-lg text-center border">
-                                <h4 class="text-sm font-medium text-secondary"> Because Coffee' Share</h4>
-                                <p id="Because Coffee -share" class="text-2xl font-bold text-accent-color mt-1">$0</p>
+                            <div class="bg-red-50 p-4 rounded-lg text-center border border-red-200">
+                                <h4 class="text-sm font-medium text-secondary-text">Because Coffee's Share</h4>
+                                <p id="because-coffee-share" class="text-2xl font-bold text-accent-color mt-1">$0</p>
                             </div>
                             <div class="bg-gray-50 p-4 rounded-lg text-center border">
-                                <h4 class="text-sm font-medium text-secondary">Boxed Office's Share</h4>
-                                <p id="paydax-share" class="text-2xl font-bold text-accent-color mt-1">$0</p>
+                                <h4 class="text-sm font-medium text-secondary-text">Boxed Office's Share</h4>
+                                <p id="boxed-office-share" class="text-2xl font-bold text-accent-color mt-1">$0</p>
                             </div>
                         </div>
                     </div>
@@ -190,7 +193,7 @@
                 <!-- Profit Per Square Foot Calculator -->
                 <div>
                     <h3 class="text-2xl font-bold mb-2 text-center">Compare to Your Shop's Performance</h3>
-                    <p class="text-secondary mb-8 max-w-3xl mx-auto text-center">Use your shop's numbers to calculate your current monthly profit per square foot and see how the Boxed Office compares.</p>
+                    <p class="text-secondary-text mb-8 max-w-3xl mx-auto text-center">Use your shop's numbers to calculate your current monthly profit per square foot and see how the Boxed Office compares.</p>
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
                         <div>
                             <label for="shopRevenue" class="block font-medium text-primary">Your Total Monthly Revenue</label>
@@ -216,12 +219,12 @@
                     </div>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div class="bg-gray-50 p-4 rounded-lg text-center border">
-                            <h4 class="text-sm font-medium text-secondary">Your Shop's Avg. Profit / Sq. Ft.</h4>
+                            <h4 class="text-sm font-medium text-secondary-text">Your Shop's Avg. Profit / Sq. Ft.</h4>
                             <p id="shop-profit-sqft" class="text-3xl font-bold text-header-text mt-1">$0.00</p>
                         </div>
-                        <div class="bg-green-50 p-4 rounded-lg text-center border-2 border-green-600">
-                            <h4 class="text-sm font-medium text-green-800">Boxed Office Profit / Sq. Ft. (16 sqft)</h4>
-                            <p id="booth-profit-sqft" class="text-3xl font-bold text-green-700 mt-1">$0.00</p>
+                        <div class="bg-red-50 p-4 rounded-lg text-center border-2 border-red-600">
+                            <h4 class="text-sm font-medium text-red-800">Boxed Office Profit / Sq. Ft. (16 sqft)</h4>
+                            <p id="booth-profit-sqft" class="text-3xl font-bold text-red-700 mt-1">$0.00</p>
                         </div>
                     </div>
                 </div>
@@ -240,17 +243,17 @@
                             <div class="spec-item">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M21 7.5l-2.25-1.313M21 7.5v2.25m0-2.25l-2.25 1.313M3 7.5l2.25-1.313M3 7.5l2.25 1.313M3 7.5v2.25m9 3l2.25-1.313M12 12.75l-2.25 1.313M12 12.75V15m0 6.75v-2.25M6.375 15l-2.25-1.313M6.375 15l2.25 1.313M6.375 15v2.25m11.25-1.5l-2.25 1.313M18.375 15l2.25 1.313M18.375 15v2.25M12 3v2.25m0 16.5v-2.25M3.75 6.75l2.25 1.313M8.25 15l-2.25 1.313M15.75 15l2.25 1.313M8.25 9l-2.25-1.313m11.25 0-2.25 1.313M12 9v2.25" /></svg>
                                 <h4 class="font-semibold">Space Requirements</h4>
-                                <p class="text-secondary">Each Boxed Office unit requires an indoor floor space of approximately 4ft x 4ft (16 sq ft). We work with you to find the perfect, low-impact spot in your shop.</p>
+                                <p class="text-secondary-text">Each Boxed Office unit requires an indoor floor space of approximately 4ft x 4ft (16 sq ft). We work with you to find the perfect, low-impact spot in your shop.</p>
                             </div>
                             <div class="spec-item">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" /></svg>
                                 <h4 class="font-semibold">Power Needs</h4>
-                                <p class="text-secondary">The unit requires continuous access to a single, standard 120V power outlet for its internal lighting, ventilation, and technology components.</p>
+                                <p class="text-secondary-text">The unit requires continuous access to a single, standard 120V power outlet for its internal lighting, ventilation, and technology components.</p>
                             </div>
                             <div class="spec-item">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M8.288 15.043A5.25 5.25 0 017.5 15h.213m.213-2.582A5.25 5.25 0 007.5 12h.213m.213-2.582A5.25 5.25 0 007.5 9h.213m0-2.582A5.25 5.25 0 007.5 6h.213m-1.39 9.333A5.232 5.232 0 007.5 18h.213a5.232 5.232 0 001.39-.333m-1.39-2.583A5.232 5.232 0 007.5 15h.213a5.232 5.232 0 001.39-.333m-1.39-2.583A5.232 5.232 0 007.5 12h.213a5.232 5.232 0 001.39-.333m-1.39-2.583A5.232 5.232 0 007.5 9h.213a5.232 5.232 0 001.39-.333M6.12 18.333A5.232 5.232 0 017.5 18h.213a5.232 5.232 0 011.39.333m-3.923-2.583A5.232 5.232 0 017.5 15h.213a5.232 5.232 0 011.39.333m-3.923-2.583A5.232 5.232 0 017.5 12h.213a5.232 5.232 0 011.39.333m-3.923-2.583A5.232 5.232 0 017.5 9h.213a5.232 5.232 0 011.39.333m-3.923-2.583A5.232 5.232 0 017.5 6h.213a5.232 5.232 0 011.39.333" /></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M8.288 15.043A5.25 5.25 0 017.5 15h.213m.213-2.582A5.25 5.25 0 007.5 12h.213m.213-2.582A5.25 5.25 0 007.5 9h.213m0-2.582A5.25 5.25 0 007.5 6h.213m-1.39 9.333A5.232 5.232 0 007.5 18h.213a5.232 5.232 0 001.39-.333m-1.39-2.583A5.232 5.232 0 007.5 15h.213a5.232 5.232 0 001.39-.333m-1.39-2.583A5.232 5.232 0 007.5 12h.213a5.232 5.232 0 001.39-.333m-1.39-2.583A5.232 5.232 0 007.5 9h.213a5.232 5.232 0 001.39-.333M6.12 18.333A5.232 5.232 0 017.5 18h.213a5.232 5.232 0 011.39.333m-3.923-2.583A5.232 5.232 0 017.5 15h.213a5.232 5.232 0 011.39.333m-3.923-2.583A5.232 5.232 0 017.5 12h.213a5.232 5.232 0 011.39.333m-3.923-2.583A5.232 5.232 0 017.5 9h.213a5.232 5.232 0 011.39.333m-3.923-2.583A5.232 5.232 0 017.5 6h.213a5.232 5.232 0 011.39.333" /></svg>
                                 <h4 class="font-semibold">Connectivity</h4>
-                                <p class="text-secondary">The unit's payment and access control system requires a reliable Wi-Fi connection to communicate with our backend.</p>
+                                <p class="text-secondary-text">The unit's payment and access control system requires a reliable Wi-Fi connection to communicate with our backend.</p>
                             </div>
                         </div>
                     </div>
@@ -259,24 +262,24 @@
                         <h3 class="text-2xl font-bold mb-4">The User Experience</h3>
                         <ol class="relative border-l border-gray-200">                  
                             <li class="mb-6 ml-6">            
-                                <span class="absolute flex items-center justify-center w-6 h-6 bg-green-100 rounded-full -left-3 ring-8 ring-white text-green-800 font-bold">1</span>
+                                <span class="absolute flex items-center justify-center w-6 h-6 bg-red-100 rounded-full -left-3 ring-8 ring-white text-red-800 font-bold">1</span>
                                 <h4 class="font-semibold">Scan to Begin</h4>
-                                <p class="text-sm text-secondary">A customer scans the QR code on the pod door with their phone.</p>
+                                <p class="text-sm text-secondary-text">A customer scans the QR code on the pod door with their phone.</p>
                             </li>
                             <li class="mb-6 ml-6">
-                                <span class="absolute flex items-center justify-center w-6 h-6 bg-green-100 rounded-full -left-3 ring-8 ring-white text-green-800 font-bold">2</span>
+                                <span class="absolute flex items-center justify-center w-6 h-6 bg-red-100 rounded-full -left-3 ring-8 ring-white text-red-800 font-bold">2</span>
                                 <h4 class="font-semibold">Pay to Access</h4>
-                                <p class="text-sm text-secondary">They pay a small initial fee on a secure mobile payment page.</p>
+                                <p class="text-sm text-secondary-text">They pay a small initial fee on a secure mobile payment page.</p>
                             </li>
                              <li class="mb-6 ml-6">
-                                <span class="absolute flex items-center justify-center w-6 h-6 bg-green-100 rounded-full -left-3 ring-8 ring-white text-green-800 font-bold">3</span>
+                                <span class="absolute flex items-center justify-center w-6 h-6 bg-red-100 rounded-full -left-3 ring-8 ring-white text-red-800 font-bold">3</span>
                                 <h4 class="font-semibold">Unlock & Use</h4>
-                                <p class="text-sm text-secondary">The door instantly unlocks. The system tracks their usage time while they work in privacy.</p>
+                                <p class="text-sm text-secondary-text">The door instantly unlocks. The system tracks their usage time while they work in privacy.</p>
                             </li>
                              <li class="mb-6 ml-6">
-                                <span class="absolute flex items-center justify-center w-6 h-6 bg-green-100 rounded-full -left-3 ring-8 ring-white text-green-800 font-bold">4</span>
+                                <span class="absolute flex items-center justify-center w-6 h-6 bg-red-100 rounded-full -left-3 ring-8 ring-white text-red-800 font-bold">4</span>
                                 <h4 class="font-semibold">Checkout & Go</h4>
-                                <p class="text-sm text-secondary">Upon finishing, they checkout via their phone and are automatically charged for the exact time used.</p>
+                                <p class="text-sm text-secondary-text">Upon finishing, they checkout via their phone and are automatically charged for the exact time used.</p>
                             </li>
                         </ol>
                     </div>
@@ -286,12 +289,12 @@
             <!-- Section 4: Partnership -->
             <section id="partnership" class="content-section p-8 md:p-12">
                 <h2 class="text-3xl font-bold mb-2 text-center">Our Zero-Risk Partnership Offer</h2>
-                <p class="text-secondary mb-8 max-w-3xl mx-auto text-center">We believe the best partnerships are built on mutual success. Our model is designed to be completely risk-free for you, allowing us to prove the value of Boxed Office before any long-term commitment.</p>
+                <p class="text-secondary-text mb-8 max-w-3xl mx-auto text-center">We believe the best partnerships are built on mutual success. Our model is designed to be completely risk-free for you, allowing us to prove the value of Boxed Office before any long-term commitment.</p>
                 
                 <div class="grid md:grid-cols-2 gap-8 text-left">
                     <div class="partnership-card p-6 rounded-lg">
                         <h3 class="text-xl font-semibold mb-3">What Boxed Office Provides:</h3>
-                        <ul class="list-disc list-inside space-y-2 text-secondary">
+                        <ul class="list-disc list-inside space-y-2 text-secondary-text">
                             <li>The premium, soundproof Boxed Office unit.</li>
                             <li>Full delivery and professional installation at no cost.</li>
                             <li>All ongoing maintenance and technical support.</li>
@@ -302,7 +305,7 @@
                     </div>
                      <div class="partnership-card p-6 rounded-lg">
                         <h3 class="text-xl font-semibold mb-3">What We Ask of Because Coffee:</h3>
-                        <ul class="list-disc list-inside space-y-2 text-secondary">
+                        <ul class="list-disc list-inside space-y-2 text-secondary-text">
                             <li>A suitable indoor space (approx. 4ft x 4ft).</li>
                             <li>Access to a standard 120V power outlet.</li>
                             <li>Access to a reliable Wi-Fi network.</li>
@@ -313,7 +316,7 @@
 
                 <div class="mt-8 bg-gray-100 p-6 rounded-lg border border-gray-200">
                     <h3 class="text-xl font-semibold mb-3 text-center">Our Partnership Terms</h3>
-                    <div class="text-center text-secondary">
+                    <div class="text-center text-secondary-text">
                         <p class="mb-2"><strong class="text-primary">Revenue Share:</strong> We operate on a simple 90/10 revenue share from all proceeds after standard Stripe processing fees (90% to Boxed Office, 10% to Because Coffee). This structure allows us to cover the significant upfront cost of the hardware, installation, and ongoing support, making this a zero-risk, pure-profit opportunity for you.</p>
                         <p><strong class="text-primary">Term:</strong> This is an ongoing partnership with no long-term commitment. Either party may end the agreement at any time with just two weeks' notice, at which point we will remove the unit free of charge.</p>
                     </div>
@@ -325,9 +328,33 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
+            // --- Global Elements & State ---
             const tabs = document.querySelectorAll('.nav-tab');
             const sections = document.querySelectorAll('.content-section');
+            let financialsChart;
+            let currentBecauseCoffeeShare = 0;
 
+            // --- Financial Model Elements ---
+            const priceSlider = document.getElementById('pricePerHour');
+            const utilizationSlider = document.getElementById('utilizationRate');
+            const priceValue = document.getElementById('priceValue');
+            const utilizationValue = document.getElementById('utilizationValue');
+            const totalMonthlyOutput = document.getElementById('total-monthly');
+            const becauseCoffeeShareOutput = document.getElementById('because-coffee-share');
+            const boxedOfficeShareOutput = document.getElementById('boxed-office-share');
+            const financialsChartCanvas = document.getElementById('financialsChart');
+
+            // --- Sq Ft Calculator Elements ---
+            const shopRevenueSlider = document.getElementById('shopRevenue');
+            const shopSqFtSlider = document.getElementById('shopSqFt');
+            const profitMarginSlider = document.getElementById('profitMargin');
+            const shopRevenueValue = document.getElementById('shopRevenueValue');
+            const shopSqFtValue = document.getElementById('shopSqFtValue');
+            const profitMarginValue = document.getElementById('profitMarginValue');
+            const shopProfitSqFtOutput = document.getElementById('shop-profit-sqft');
+            const boothProfitSqFtOutput = document.getElementById('booth-profit-sqft');
+            
+            // --- Tab Navigation Logic ---
             tabs.forEach(tab => {
                 tab.addEventListener('click', function() {
                     const targetId = this.dataset.target;
@@ -339,31 +366,7 @@
                 });
             });
 
-            // --- Financial Model Logic ---
-            const priceSlider = document.getElementById('pricePerHour');
-            const utilizationSlider = document.getElementById('utilizationRate');
-            const priceValue = document.getElementById('priceValue');
-            const utilizationValue = document.getElementById('utilizationValue');
-            
-            const totalMonthlyOutput = document.getElementById('total-monthly');
-            const warmWavesShareOutput = document.getElementById('warm-waves-share');
-            const paydaxShareOutput = document.getElementById('paydax-share');
-
-            const financialsChartCanvas = document.getElementById('financialsChart');
-            let financialsChart;
-
-            // --- Sq Ft Calculator Logic ---
-            const shopRevenueSlider = document.getElementById('shopRevenue');
-            const shopSqFtSlider = document.getElementById('shopSqFt');
-            const profitMarginSlider = document.getElementById('profitMargin');
-            const shopRevenueValue = document.getElementById('shopRevenueValue');
-            const shopSqFtValue = document.getElementById('shopSqFtValue');
-            const profitMarginValue = document.getElementById('profitMarginValue');
-            const shopProfitSqFtOutput = document.getElementById('shop-profit-sqft');
-            const boothProfitSqFtOutput = document.getElementById('booth-profit-sqft');
-
-            let currentWarmWavesShare = 0;
-
+            // --- Formatting Helpers ---
             function formatCurrency(value) {
                 return value.toLocaleString('en-US', { style: 'currency', currency: 'USD', minimumFractionDigits: 2 });
             }
@@ -371,9 +374,12 @@
                 return value.toLocaleString('en-US', { style: 'currency', currency: 'USD', minimumFractionDigits: 0, maximumFractionDigits: 0 });
             }
 
+            // --- Core Calculation Logic ---
             function calculateAll() {
-                if (!priceSlider) return;
-                // Boxed Office Calculation
+                // This function runs on any slider input.
+                if (!priceSlider) return; 
+
+                // 1. Boxed Office Calculation
                 const price = parseFloat(priceSlider.value);
                 const utilization = parseFloat(utilizationSlider.value) / 100;
                 const hoursOpen = 9;
@@ -384,17 +390,17 @@
 
                 const dailyHoursUsed = hoursOpen * utilization;
                 const totalMonthlyRevenue = price * dailyHoursUsed * daysOpen;
-
-                const paydaxShare = totalMonthlyRevenue * 0.9;
-                currentWarmWavesShare = totalMonthlyRevenue * 0.1;
+                
+                const boxedOfficeShare = totalMonthlyRevenue * 0.9;
+                currentBecauseCoffeeShare = totalMonthlyRevenue * 0.1;
                 
                 totalMonthlyOutput.textContent = formatCurrencyNoCents(totalMonthlyRevenue);
-                warmWavesShareOutput.textContent = formatCurrencyNoCents(currentWarmWavesShare);
-                paydaxShareOutput.textContent = formatCurrencyNoCents(paydaxShare);
+                becauseCoffeeShareOutput.textContent = formatCurrencyNoCents(currentBecauseCoffeeShare);
+                boxedOfficeShareOutput.textContent = formatCurrencyNoCents(boxedOfficeShare);
                 
-                updateChart(currentWarmWavesShare, paydaxShare);
+                updateChart(currentBecauseCoffeeShare, boxedOfficeShare);
 
-                // Sq Ft Calculator Calculation
+                // 2. Sq Ft Calculator Calculation
                 const shopRevenue = parseFloat(shopRevenueSlider.value);
                 const shopSqFt = parseFloat(shopSqFtSlider.value);
                 const profitMargin = parseFloat(profitMarginSlider.value) / 100;
@@ -404,29 +410,30 @@
                 profitMarginValue.textContent = `${Math.round(profitMargin * 100)}%`;
 
                 const totalShopProfit = shopRevenue * profitMargin;
-                const shopProfitPerSqFt = totalShopProfit / shopSqFt;
-                const boothProfitPerSqFt = currentWarmWavesShare / 16; // Booth is 16 sq ft
+                const shopProfitPerSqFt = shopSqFt > 0 ? totalShopProfit / shopSqFt : 0;
+                const boothProfitPerSqFt = currentBecauseCoffeeShare / 16; // Booth is 16 sq ft
 
                 shopProfitSqFtOutput.textContent = formatCurrency(shopProfitPerSqFt);
                 boothProfitSqFtOutput.textContent = formatCurrency(boothProfitPerSqFt);
             }
 
-            function updateChart(partnerShare, paydaxShare) {
+            // --- Charting Logic ---
+            function updateChart(partnerShare, companyShare) {
                 if(financialsChart) {
-                    financialsChart.data.datasets[0].data = [partnerShare, paydaxShare];
+                    financialsChart.data.datasets[0].data = [partnerShare, companyShare];
                     financialsChart.update();
                 }
             }
 
             function initializeChart() {
-                 if (financialsChartCanvas) {
+                 if (financialsChartCanvas && !financialsChart) { // Only init once
                     financialsChart = new Chart(financialsChartCanvas.getContext('2d'), {
                         type: 'doughnut',
                         data: {
-                            labels: ["Because Coffee' Share", "Boxed Office's Share"],
+                            labels: ["Because Coffee's Share", "Boxed Office's Share"],
                             datasets: [{
-                                data: [0, 0],
-                                backgroundColor: ['#1e3a8a', '#166534'],
+                                data: [0, 0], // Will be populated by calculateAll
+                                backgroundColor: ['#ef4444', '#991b1b'], // red-500, red-800
                                 borderColor: '#ffffff',
                                 borderWidth: 4,
                                 hoverOffset: 8
@@ -436,8 +443,18 @@
                             responsive: true,
                             maintainAspectRatio: false,
                             cutout: '60%',
+                            animation: {
+                                animateScale: true,
+                                animateRotate: true
+                            },
                             plugins: {
-                                legend: { position: 'bottom', labels: { color: 'var(--primary-text)' } },
+                                legend: { 
+                                    position: 'bottom', 
+                                    labels: { 
+                                        color: 'var(--primary-text)',
+                                        font: { size: 14 } 
+                                    } 
+                                },
                                 tooltip: {
                                     callbacks: {
                                         label: function(context) {
@@ -456,15 +473,14 @@
                 }
             }
             
+            // --- Event Listeners & Initialization ---
             const financialModelSection = document.getElementById('financials');
             if (financialModelSection) {
                 const observer = new MutationObserver((mutations) => {
                     for (const mutation of mutations) {
                         if (mutation.attributeName === 'class' && financialModelSection.classList.contains('active')) {
-                            if (!financialsChart) {
-                                initializeChart();
-                            }
-                            calculateAll();
+                           initializeChart();
+                           calculateAll(); 
                         }
                     }
                 });
@@ -475,10 +491,7 @@
                     if (control) control.addEventListener('input', calculateAll);
                 });
                 
-                if (financialModelSection.classList.contains('active')) {
-                    initializeChart();
-                    calculateAll();
-                }
+                calculateAll();
             }
         });
     </script>
